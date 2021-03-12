@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "hapi": "^18.1.0",
     "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.8",
     "nodemon": "^2.0.6"
   }
