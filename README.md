@@ -2,19 +2,15 @@ Welcome to Digimocker - a simple Mock of the Digilocker APIs
 
 Deployed version - https://digimocker.herokuapp.com/api/
 
-Routes 
+## How do you go about it?
 
-Sign up(name/email/password) - /api/user/register/
+The service is CLI based only(no UI), so you'll have to use Postman to test the APIs.
 
-Login(email/password) - /api/user/login/
-
-Get all docs - /api/docs
-
-Process - 
-
-- Sign up
-- Login
-- Copy the access token that login returns, and pass it in the header for the GET /api/docs request, with request body being the email.
+1. Sign up route - /user/register. Sign up using name, email and password
+2. Log in route - /user/login. Login using email and password.
+3. Log in will return an auth token. Copy it.
+4. To fetch list of all docs - /docs - pass in the auth token you'd copied in the request header as 'auth-token' and pass in { email: <your-login-email> } in the body
+5. To fetch a particular document (Aadhar/PAN/DL) - /docs/Aadhar. Everything else the same as in 4.
 
 Sample user - 
 

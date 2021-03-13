@@ -13,6 +13,10 @@ const docSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    url: {
+        type: String,
+        required: true
+    },
     exported: {
         type: Boolean,
         required: true,
