@@ -33,7 +33,7 @@ router.post('/register', async (req, res) => {
         password: hashedPassword
     })
 
-    // Error handling
+    // Error handling 
     try {
         const savedUser = await user.save()
         console.log('savedUser: ', savedUser)
@@ -54,7 +54,10 @@ router.post('/login', async (req, res) => {
         return res.sendStatus(400).send(error.details[0].message)
     // Checking to make sure user exists
     const userRegistered = await User.findOne({ email: req.body.email })
-    if (!userRegistered) return res.sendStatus(400).send('Email not found')
+    if (!userRegistered) {
+        return res.send('Email not found')
+        
+    }
 
     // Check password
     const validPassword = await bcrypt.compare(req.body.password, userRegistered.password)
