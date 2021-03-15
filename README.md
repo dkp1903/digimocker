@@ -32,6 +32,7 @@ Password : user-password
 
 Database schema : 
     The database will contain two sets of documents - Users, and Documents.
+    
     User - {
         name: String,
         username: String,
@@ -45,6 +46,7 @@ Database schema :
         identifier : String,
         URL: String
     }
+    
 You can refer to the /models folder for better understanding of the schemas.
 
 If you want to build on this, follow these steps : 
