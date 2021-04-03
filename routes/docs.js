@@ -2,7 +2,7 @@ const router = require('express').Router()
 const verify = require('./verifyToken')
 const Doc = require('../models/Doc')
 
-router.get('/', verify, async (req, res) => {
+router.post('/', verify, async (req, res) => {
     
     try {
         const docs = await Doc.find({email: req.body.email})
@@ -12,7 +12,7 @@ router.get('/', verify, async (req, res) => {
     }
     
 })
-router.get('/:name', verify, async (req, res) => {
+router.post('/:name', verify, async (req, res) => {
     
     try {
         const singleDoc = await Doc.find({name: req.params.name, email: req.body.email})
