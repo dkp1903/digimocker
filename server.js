@@ -6,6 +6,7 @@ require('dotenv').config()
 // Import routes
 const authRoute = require('./routes/auth')
 const docsRoute = require('./routes/docs')
+const addRoute = require('./routes/add')
 const bodyParser = require("body-parser")
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,6 +19,7 @@ app.use(express.json())
 // Routes middleware
 app.use('/api/user', authRoute)
 app.use('/api/docs', docsRoute)
+app.use('/api/add', addRoute)
  
 
 app.listen(PORT, () => 
