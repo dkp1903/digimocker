@@ -59,5 +59,7 @@ If you want to build on this, follow these steps :
     d. Run `npm install` to install the dependencies
     e. Run `npm run start` to start the app. If it all works well, the application will be live on localhost:5000
 
+To contribute to this repo, please reach out to me to get access to the MongoDB instance.
+
 
 Creator - [Dushyant Pathak](mailto:dushyant.pathak@crio-users.in)
