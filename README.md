@@ -15,8 +15,10 @@ The service is CLI based only(no UI), so you'll have to use Postman to test the 
 1. Sign up route - POST /user/register. Sign up using name, email and password
 2. Log in route - POST /user/login. Login using email and password.
 3. Log in will return an auth token. Copy it.
-4. To fetch list of all docs - GET /docs - pass in the auth token you'd copied in the request header as 'auth-token' and pass in { email: <your-login-email> } in the body
-5. To fetch a particular document (Aadhar/PAN/DL) - GET /docs/Aadhar or /docs/PAN and so on. Everything else the same as in 4.
+
+**Note : In points 5 and 6, GET has been changed to POST, to allow email to be passed as request-body**
+4. To fetch list of all docs - POST /docs - pass in the auth token you'd copied in the request header as 'auth-token' and pass in { email: <your-login-email> } in the body
+5. To fetch a particular document (Aadhar/PAN/DL) - POST /docs/Aadhar or /docs/PAN and so on. Everything else the same as in 4.
 6. To add a document - POST /docs/add. Auth token, as described in 4 should be part of header. Body - 
 {
     name: "Aadhar"(or PAN or DL),
